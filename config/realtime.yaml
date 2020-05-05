@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
       - name: realtimeapp
-        image: gbaeke/realtime-go-consul:1.0.2
+        image: gbaeke/realtime-go-consul:1.0.3
         env:
         - name: REDISHOST
           value: "redisapp:6379"
