@@ -44,6 +44,9 @@ metadata:
   name: realtimeapp
   labels:
     app: realtimeapp
+  annotations:
+    fluxcd.io/automated: 'true'
+    fluxcd.io/tag.realtimeapp: semver:~1
 spec:
   selector:
     matchLabels:
@@ -56,7 +59,7 @@ spec:
     spec:
       containers:
       - name: realtimeapp
-        image: gbaeke/realtime-go:consul
+        image: gbaeke/realtime-go-consul:1.0.0
         env:
         - name: REDISHOST
           value: "redisapp:6379"
